@@ -1,0 +1,28 @@
+{
+    "background": {
+        "scripts": ["runbackground.min.js"]
+    },
+    "browser_action": {
+        "default_icon": "./icons/icon.png",
+        "default_title": "简单爬，简简单单采集你的数据"
+    },
+    "content_scripts": [{
+        "js": ["js/connector.js"],
+        "matches": ["http://*/*", "https://*/*"]
+    }],
+    "externally_connectable": {
+        "accepts_tls_channel_id": false,
+        "ids": ["*"]
+    },
+    "icons": {
+        "128": "./icons/128.png",
+        "16": "./icons/16.png",
+        "48": "./icons/48.png"
+    },
+    "description": "爬虫可视化点选配置工具，简简单单采集你的数据",
+    "manifest_version": 2,
+    "name": "爬虫可视化点选配置工具",
+    "permissions": ["cookies", "tabs", "notifications", "background", "contextMenus", "*://*/*"],
+    "version": "1.0.0",
+    "web_accessible_resources": ["*", "*/*"]
+}
