@@ -1,0 +1,10 @@
+[
+  {
+    "name": "淘宝",
+    "api": "http://api.m.taobao.com/rest/api3.do?api=mtop.common.getTimestamp"
+  },
+  {
+    "name": "苏宁",
+    "api": "http://quan.suning.com/getSysTime.do"
+  }
+]

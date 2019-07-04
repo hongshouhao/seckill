@@ -1,6 +1,6 @@
 {
   "name": "秒杀助手",
-  "description": "购物秒杀辅助，提升秒杀几率！",
+  "description": "购物秒杀辅助",
   "version": "0.0.3",
   "icons": {
     "16": "image/seckill-16.png",
@@ -20,11 +20,13 @@
   "background": {
     "scripts": ["js/background.js"]
   },
-  "content_scripts": [{
-    "matches": ["http://*/*", "https://*/*"],
-    "js": ["js/secKill.js"],
-    "css": ["css/form.css"]
-  }],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["js/secKill.js"],
+      "css": ["css/form.css"]
+    }
+  ],
   "content_security_policy": "script-src 'self' 'unsafe-eval' https://sapi.k780.com/; object-src 'self'",
   "browser_action": {
     "default_icon": "image/seckill-16.png",
@@ -32,10 +34,5 @@
     "default_popup": "index.html"
   },
   "manifest_version": 2,
-  "web_accessible_resources": [
-    "page/newTask.html",
-    "lib/*/*/*",
-    "js/newTask.js"
-  ],
   "update_url": "http://www.google.com/"
 }
