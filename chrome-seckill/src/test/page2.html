@@ -1,0 +1,24 @@
+<html>
+
+<head>
+</head>
+
+<body>
+  <div>
+    <input id="checkaAll" type="checkbox">全选</input>
+    <button id="commit">提交订单</button>
+  </div>
+
+  <script type="text/javascript">
+    document.getElementById('commit').onclick = function () {
+      document.location = "page3.html";
+    };
+
+    document.getElementById('checkaAll').onchange = function () {
+      console.log("check all");
+    };
+
+  </script>
+</body>
+
+</html>

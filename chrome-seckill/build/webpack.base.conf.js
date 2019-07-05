@@ -4,7 +4,7 @@ const utils = require("./utils");
 const config = require("../config");
 const vueLoaderConfig = require("./vue-loader.conf");
 
-function resolve(dir) {
+function resolve (dir) {
   return path.join(__dirname, "..", dir);
 }
 
@@ -23,7 +23,6 @@ module.exports = {
   context: path.resolve(__dirname, "../"),
   entry: {
     app: "./src/main.js",
-    seckill: ""
   },
   output: {
     path: config.build.assetsRoot,
@@ -78,18 +77,18 @@ module.exports = {
           name: utils.assetsPath("fonts/[name].[hash:7].[ext]")
         }
       },
-      {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"]
-      },
-      {
-        test: /\.html$/,
-        use: [
-          {
-            loader: "html-loader"
-          }
-        ]
-      }
+      // {
+      //   test: /\.css$/,
+      //   use: ["style-loader", "css-loader"]
+      // },
+      // {
+      //   test: /\.html$/,
+      //   use: [
+      //     {
+      //       loader: "html-loader"
+      //     }
+      //   ]
+      // }
     ]
   },
   node: {

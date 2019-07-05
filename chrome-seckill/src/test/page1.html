@@ -1,0 +1,31 @@
+<html>
+
+<head>
+</head>
+
+<body>
+  <div>
+    <button id="start">开始</button>
+    <a id="nextpage" href="page2.html">page2</a>
+  </div>
+
+  <script type="text/javascript">
+    var killtime = new Date().getTime() + 15000
+    console.log(killtime)
+
+    //killtime = new Date(11111111);
+    setInterval(function () {
+      if (killtime - new Date().getTime() < 100) {
+        document.getElementById('nextpage').innerText = "立即抢购";
+      }
+    }, 1000)
+
+    document.getElementById('start').onclick = function () {
+      document.getElementById('nextpage').innerText = "立即抢购";
+      setTimeout(function () {}, 10000)
+    };
+
+  </script>
+</body>
+
+</html>

@@ -20,13 +20,10 @@
   "background": {
     "scripts": ["js/background.js"]
   },
-  "content_scripts": [
-    {
-      "matches": ["http://*/*", "https://*/*"],
-      "js": ["js/secKill.js"],
-      "css": ["css/form.css"]
-    }
-  ],
+  "content_scripts": [{
+    "matches": ["http://*/*", "https://*/*"],
+    "js": ["js/secKill.js"]
+  }],
   "content_security_policy": "script-src 'self' 'unsafe-eval' https://sapi.k780.com/; object-src 'self'",
   "browser_action": {
     "default_icon": "image/seckill-16.png",
