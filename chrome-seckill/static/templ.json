@@ -1,0 +1,54 @@
+[
+  {
+    "name": "测试",
+    "model": {
+      "title": "page1",
+      "url": "E:/_OpenSource/seckill2/chrome-seckill/src/test/page1.html",
+      "selectorType": "selectorType",
+      "pages": [
+        {
+          "mark": "page1",
+          "doms": [
+            {
+              "xpath": "//*[text()=\"立即抢购\"]",
+              "type": "a"
+            }
+          ]
+        },
+        {
+          "mark": "page2",
+          "doms": [
+            {
+              "xpath": "//*[@id=\"checkaAll\"]",
+              "type": "chk"
+            },
+            {
+              "xpath": "//*[@id=\"commit\"]",
+              "type": "btn"
+            }
+          ]
+        },
+        {
+          "mark": "page3",
+          "doms": [
+            {
+              "xpath": "//*[@id=\"ok\"]",
+              "type": "btn"
+            }
+          ]
+        },
+        {
+          "mark": "page4",
+          "doms": [
+            {
+              "xpath": "//*[@id=\"ok\"]",
+              "type": "btn"
+            }
+          ]
+        }
+      ],
+      "killTime": "2019-07-11 00:00:00",
+      "frequency": 100
+    }
+  }
+]

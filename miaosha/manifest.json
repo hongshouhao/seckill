@@ -1,7 +1,7 @@
 {
-  "name": "秒杀助手-hongfanfan",
-  "description": "秒杀辅助-hongfanfan",
-  "version": "0.0.3",
+  "name": "秒杀助手",
+  "description": "购物辅助-hongfanfan",
+  "version": "0.0.1",
   "icons": {
     "16": "image/seckill-16.png",
     "48": "image/seckill-48.png",
@@ -23,8 +23,24 @@
   },
   "content_scripts": [
     {
-      "matches": ["http://*/*", "https://*/*", "file:///*"],
-      "js": ["js/secKill.js"]
+      "matches": [
+        "https://item.taobao.com/*",
+        "https://detail.tmall.com/*",
+        "file:///*"
+      ],
+      "js": ["js/taobao_qianggou.js"]
+    },
+    {
+      "matches": ["https://buy.tmall.com/order/*"],
+      "js": ["js/taobao_tijiaodingdan.js"]
+    },
+    {
+      "matches": ["https://cart.taobao.com/*"],
+      "js": ["js/taobao_gouwuche.js"]
+    },
+    {
+      "matches": ["https://cart.jd.com/*"],
+      "js": ["js/jingdong_gouwuche.js"]
     }
   ],
   "content_security_policy": "script-src 'self' 'unsafe-eval' https://sapi.k780.com/; object-src 'self'",
@@ -33,7 +49,7 @@
     "default_title": "秒杀助手",
     "default_popup": "index.html"
   },
-  "web_accessible_resources": ["js/secKill.js"],
   "manifest_version": 2,
+  "web_accessible_resources": ["js/*"],
   "update_url": "http://www.google.com/"
 }
